@@ -10,9 +10,30 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contact from "./contact";
 import SocialDeatails from "./SocialDeatails";
-import EmailForm from "@/components/emailForm";
+// import EmailForm from "@/components/emailForm";
+import { useEffect } from "react";
+import AOS from 'aos';
+import { IAOS } from "@/types";
 
 export default function Index() {
+
+  useEffect(() => {
+    /**
+     * Server-side rendering does not provide the 'document' object
+     * therefore this import is required either in useEffect or componentDidMount as they
+     * are exclusively executed on a client
+     */
+    const AOS = require("aos");
+    AOS.init({
+      once: true,
+    });
+  }, []);
+
+  useEffect(() => {
+    if (AOS) {
+      AOS.refresh();
+    }
+  });
   return (
     <>
       <Head>

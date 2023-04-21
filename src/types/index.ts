@@ -20,3 +20,6 @@ export interface Iinput {
   type: string,
   placeholder: string
 }
+export interface IAOS {
+  type: any | undefined
+}

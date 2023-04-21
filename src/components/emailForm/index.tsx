@@ -6,7 +6,6 @@ const EmailForm = () => {
 
   const sendEmail = (e: any) => {
     e.preventDefault();
-    console.log(form.current, "form>>>>>>>");
     emailjs
       .sendForm(
         "service_j5b449k",

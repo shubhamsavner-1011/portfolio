@@ -10,7 +10,6 @@ const BasicForm = () => {
 const SERVICEID = process.env.REACT_APP_EMAILJS_SERVICE_ID || '';
 const TEMPID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || '';
 const PUBLICID = process.env.REACT_APP_EMAILJS_USER_ID || '';
-console.log(SERVICEID, TEMPID, PUBLICID, 'id>>>>>>>>>>>' )
   const initialValues = { user_name: "", user_email: "", message: "" };
   const onSubmit=(values: any, {resetForm}: any) => {
     console.log(values , 'refffff')
