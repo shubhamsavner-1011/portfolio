@@ -10,13 +10,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contact from "./contact";
 import SocialDeatails from "./SocialDeatails";
-// import EmailForm from "@/components/emailForm";
+
 import { useEffect } from "react";
-import AOS from 'aos';
-import { IAOS } from "@/types";
-
+import AOS from "aos";
+import { meta } from "@/constants/imageConstants";
+import { IMeta } from "@/types";
 export default function Index() {
-
   useEffect(() => {
     /**
      * Server-side rendering does not provide the 'document' object
@@ -42,6 +41,9 @@ export default function Index() {
         </title>
         <meta name="description" content="This is my portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:image" content={`${meta.metaImage}`}/>
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
@@ -76,9 +78,9 @@ export default function Index() {
       <Technology />
       <Experience />
       <Portfolio />
-      <Contact/>
-      <SocialDeatails/>
-       {/* <EmailForm/> */}
+      <Contact />
+      <SocialDeatails />
+      {/* <EmailForm/> */}
     </>
   );
 }

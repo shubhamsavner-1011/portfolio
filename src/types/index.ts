@@ -7,6 +7,9 @@ export interface ILogo {
   className?: string;
 }
 
+export interface IMeta {
+  metaImage: string| StaticImageData
+}
 export interface ITech {
   icon : string | StaticImageData;
   technology: string,

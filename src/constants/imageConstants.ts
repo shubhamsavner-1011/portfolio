@@ -7,6 +7,8 @@ import thoughtingo from '../assets/images/thoughtingo.png';
 import technitian from '../assets/images/technitian.png';
 import snapdeal from '../assets/images/snapdeal.png'
 import contact from '../assets/images/call.png'
+import metaImage from '../assets/images/meta.png'
+
 export const imgUrl = {
     myImage : myPhoto,
     vector: vector,
@@ -27,3 +29,7 @@ export const Images = [
       portfolio: technitian
     }
   ];
+
+  export const meta = {
+    metaImage : metaImage
+  }
