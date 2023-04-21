@@ -66,9 +66,6 @@ const Header = () => {
               <Nav.Link href="#portfolio" className="mx-4 navlinks">
                 Portfolio
               </Nav.Link>
-              <Nav.Link href="#testimonials" className="mx-4 navlinks">
-                Testimonials
-              </Nav.Link>
               <Nav.Link href="#contact" className="mx-4 contact">
                 Contact
               </Nav.Link>

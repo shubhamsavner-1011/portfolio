@@ -5,6 +5,12 @@ import "animate.css";
 import Technology from "./technology";
 import "../styles/Technology.module.css";
 import Experience from "./experience";
+import Portfolio from "./portfolio";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Contact from "./contact";
+import SocialDeatails from "./SocialDeatails";
+import EmailForm from "@/components/emailForm";
 
 export default function Index() {
   return (
@@ -30,6 +36,16 @@ export default function Index() {
           href="https://unpkg.com/aos@2.3.1/dist/aos.css"
           rel="stylesheet"
         ></link>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>AOS.init();</script>
       </Head>
@@ -37,7 +53,11 @@ export default function Index() {
       <Header />
       <PersonalDetails />
       <Technology />
-      <Experience/> 
+      <Experience />
+      <Portfolio />
+      <Contact/>
+      <SocialDeatails/>
+       {/* <EmailForm/> */}
     </>
   );
 }

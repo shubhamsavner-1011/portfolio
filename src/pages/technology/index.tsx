@@ -6,19 +6,19 @@ const Technology = () => {
     <div>
       <p className="tech">Technology</p>
       <div className="container">
-        <div className="row">
+       <div className="row justify-content-around">
             
                 {Tech?.map((item)=> {
-                    return(
+                     return(
                         <>  
-                        <div className="col-md-4 col-xs-12 mt-2 mb-2" data-aos={`${item.animation}`}>               
+                       <div className="col-md-3 col-xs-12 mt-2" data-aos={`${item.animation}`}>               
                         <TechnologyCard icon={item.icon} technology={item.technology} subTechnology={item.subTechnology}/>
-                        </div>      
+                        </div>   {/*  */}   
                         </>
                     )
                 })}
            
-        </div>
+        </div> 
       </div>
     </div>
   );

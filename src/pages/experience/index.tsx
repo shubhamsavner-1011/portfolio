@@ -4,10 +4,10 @@ import React from "react";
 
 const Experience = () => {
   return (
-    <div>
-      <div className="container experience">
+    <div id="experience">
+      <div className="container experience" >
         <div className="row justify-content-center">
-        <p className="subTitle">Experience</p>
+        <p className="subTitle text-center">Experience</p>
           <div className="col-xs-6 col-md-2 mt-5" data-aos="fade-up-right">
             <div className="exe">
               <Image src={imgUrl.circle} alt="circle" />

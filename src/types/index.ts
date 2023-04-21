@@ -12,3 +12,11 @@ export interface ITech {
   technology: string,
   subTechnology: string  
 }
+
+export interface Iimage {
+  portfolio: string| StaticImageData
+}
+export interface Iinput {
+  type: string,
+  placeholder: string
+}

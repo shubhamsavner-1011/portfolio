@@ -9,7 +9,8 @@
   color: rgb(36, 45, 73) !important;
 }
 .brand{font-size: 35px;font-weight: 600;}
-
+.list-group{background: none;}
+.list-group-item:first-child{padding: 9px 9px 10px 0 ;}
 .contact {
   background-color: orange;
   padding: 5px 30px;
@@ -45,7 +46,6 @@ margin-top: 60px;
   }
 .subTitle{
   color: rgb(36, 45, 73);
-  text-align: center;
   font-size: 35px;
   font-weight: 400;
 }
@@ -54,20 +54,33 @@ margin-top: 60px;
 .custom-class {
   display: block;
   box-shadow: rgba(240, 14, 138, 0.747) 0px 0px 90px -12px;
+  transition: transform .3s ease-out;
+  cursor: pointer;
   /* box-shadow: 0px 19px 60px rgb(0 0 0/8%) */
+}
+.custom-class:hover {
+  transform: translate(0, -20px);
 }
 .custom-thumb {
   display: block;
   box-shadow: rgb(255, 217, 0) 0px 0px 90px -12px;
+  transition: transform .3s ease-out;
+  cursor: pointer;
   /* box-shadow: 0px 19px 60px rgb(0 0 0/8%) */
+}
+.custom-thumb:hover{
+  transform: translate(0, -20px);
 }
 .tech-card {
   margin: auto;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: transform .3s ease-out;
+  cursor: pointer;
 }
 .tech-card:hover{
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  transform: translate(0, -20px);
 }
   /* Technology end */
 
@@ -90,30 +103,68 @@ margin-top: 60px;
     margin-top: 7px;
     position: absolute;
   }
-  /* .outer_circle {
-    position: relative;
-    margin: 50px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: #ffffff;
-}
-  
-.inner_circle {
-    background-image: linear-gradient(
-             to bottom, rgb(9, 112, 26) 0%,
-             rgb(21, 255, 0) 100%);
-    content: '';
-    position: absolute;
-    top: -20px;
-    bottom: -20px;
-    right: -20px;
-    left: -20px;
-    z-index: -1;
-    border-radius: inherit;
-} */
+  .portfolio-card{
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin: auto;
+  }
+  .error{color:red}
 
   /* experience end */
+
+  /* contact start */
+  .submit {width: -webkit-fill-available}
+/* contact end */
+
+
+/* social details start */
+.email{font-size: 25px;color:white;margin-top:20px;font-weight: 600;}
+.social{position: relative;height: 300px;}
+.ocean {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg) repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 100%;
+  height: 198px;
+  /* animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; */
+  /* animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; */
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  /* animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite; */
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+@keyframes swell {
+  0%,
+	100% {
+    transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+.endWave{
+	display:none;
+}
+/* social details end */
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -155,8 +206,14 @@ margin-top: 60px;
 
 html,
 body {
-  max-width: 100vw;
+  /* max-width: 100vw; */
+  /* height: 100%; */
+   background: radial-gradient(ellipse at center, #fffeea 0%, #fffeea 35%, #b7e8eb 100%);
+  /* overflow: hidden; */
+}
 
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -184,5 +241,30 @@ a {
   .custom-class, .custom-thumb {
     display: none;
   }
-  /* .tech-card{margin: 10px 0 } */
+  .email{display: none;}
  }
+
+
+
+ /* scroll bar */
+ /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(36, 45, 73); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(36, 45, 73); 
+}
